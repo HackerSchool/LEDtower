@@ -91,11 +91,11 @@ void printmatrix(int matriz[][verticalmax][3])
 	return;
 }
 
-void snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate, int speed, int speedup_rate)
+int snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate, int speed, int speedup_rate, int game_number)
 {
 	int background_color[3] = {5,0,5};
-    int body_color[3] = {0,7,0}; 
-	int head_color[3] = {0,15,0};
+        int body_color[3] = {0,7,0}; 
+	int head_color[3] = {15,15,0};
 	int food_color[3] = {15,0,0};
 
 	int matriz[horizontalmax][verticalmax][3];
@@ -119,24 +119,24 @@ void snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate
 	body* last = NULL;
 	head = add(head, 4, 7); 
 	matriz[4][7][0] = head_color[0];
-    matriz[4][7][1] = head_color[1];
-    matriz[4][7][2] = head_color[2];
+        matriz[4][7][1] = head_color[1];
+        matriz[4][7][2] = head_color[2];
 	
 	last = add(head, 3, 7); 
 	matriz[3][7][0] = body_color[0];
-    matriz[3][7][1] = body_color[1];
-    matriz[3][7][2] = body_color[2];
+        matriz[3][7][1] = body_color[1];
+        matriz[3][7][2] = body_color[2];
 	last = add(head, 2, 7); 
 	matriz[2][7][0] = body_color[0];
-    matriz[2][7][1] = body_color[1];
-    matriz[2][7][2] = body_color[2];
+        matriz[2][7][1] = body_color[1];
+        matriz[2][7][2] = body_color[2];
 	last = add(head, 1, 7); 
 	matriz[1][7][0] = body_color[0];
-    matriz[1][7][1] = body_color[1];
-    matriz[1][7][2] = body_color[2];
+        matriz[1][7][1] = body_color[1];
+        matriz[1][7][2] = body_color[2];
 	last = add(head, 0, 7); 
 	matriz[0][7][0] = body_color[0];
-    matriz[0][7][1] = body_color[1];
+        matriz[0][7][1] = body_color[1];
 	matriz[0][7][2] = body_color[2];
   /*last = add(head, 7, 7); 
 	matriz[7][7] = body_color;
@@ -148,7 +148,7 @@ void snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate
 
 	int food_h = 0;
 	int food_v = 0;
-	srand(7);
+	srand(game_number);
 	do{
 		food_h = rand()%horizontalmax;
 		food_v = rand()%verticalmax;		
@@ -174,7 +174,7 @@ void snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate
 			int counter = 0;
 	while(1)
 	{
-		delay(100);
+		delay(300);
 		
 		/* decision */
 		int safe = _false;
@@ -194,7 +194,7 @@ void snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate
 			if (gameover == _true)
 			{
 				endgame(matriz, background_color);
-				return;
+				return rand();
 			} 
 				
 			int direction, new_direction;
@@ -455,7 +455,7 @@ void snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate
 		/*getchar();*/
 			
 	}
-	return;
+	return rand();
 }
 
 void endgame(int matriz[][verticalmax][3], int background_color[3])
@@ -561,7 +561,7 @@ void loop(){//***start loop***start loop***start loop***start loop***start loop*
   // LED(level you want 0-7, row you want 0-7, column you want 0-7, red brighness 0-15, green brighness 0-15, blue brighness 0-15);
 
   
-  mxclear(15, 15, 15);
+  //mxclear(15, 15, 15);
   
 //  battery(30, 15, 0, 0, 0);
   
@@ -573,8 +573,9 @@ void loop(){//***start loop***start loop***start loop***start loop***start loop*
 //wave(dlay, r,g,b, unsigned int nr_waves, float freq)
 //wave(200, 15, 15, 15, 100, 1./4);
 
-
-//  snake(horizontalmax, verticalmax, 12, 2, 1, 200);
+//void snake(int horizontallimit, int verticallimit, int sizelimit, int grouthrate, int speed, int speedup_rate)
+ int prev_game = rand();
+ prev_game = snake(horizontalmax, verticalmax, 12, 2, 1, 200, prev_game);
 
 
 }//***end loop***end loop***end loop***end loop***end loop***end loop***end loop***end loop***end loop***end loop***end loop***end loop

@@ -99,7 +99,7 @@ void loop(){//***start loop***start loop***start loop***start loop***start loop*
     battery(40, rand()%16, rand()%16, rand()%16, rand()%2);
   }
 */
-  unsigned long starttime;
+/*  unsigned long starttime;
   
   starttime = millis();
   
@@ -107,7 +107,7 @@ void loop(){//***start loop***start loop***start loop***start loop***start loop*
   {
     fullrandom(20);
   }
-
+*/
   mxclear(0,0,0);
   spiral(4, 1, 0, 0);
   spiral(4, 0, 1, 0);
@@ -117,7 +117,7 @@ void loop(){//***start loop***start loop***start loop***start loop***start loop*
   spiral(2, 0, 1, 0);
   spiral(2, 0, 0, 1);
   
-  wave(150, 0, 0, 15, 50, 1./4);
+  //wave(150, 0, 0, 15, 50, 1./4);
 
 
 
