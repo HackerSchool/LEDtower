@@ -4,6 +4,15 @@ This repository has the arduino code that controls our LED tower, as well as som
 The LED tower is a cylindrical tower made of copper with an 8 by 16 grid of controllable RGB LED's around it.
 It's possible to control each LED and change it to any of 16 million available colors. This allows the user to make animations, games, displays and other things via software. The whole tower refreshes at roughly 120Hz.
 
+It was built during an [HackerSchool](http://hackerschool.io/) event, the LX Reactor Winter Edition 2014, that took place in Lisbon during about 10 days.
+
+## The Team:
+- [João Almeida](http://joao-m-almeida.github.io/)
+- Gonçalo Ribeiro
+- Ricardo Amendoeira
+- João Sintra
+- Fábio Azeiton
+- David Fernandes
 
 
 ## Some Pictures
