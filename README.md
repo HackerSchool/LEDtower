@@ -6,10 +6,17 @@ It's possible to control each LED and change it to any of 16 million available c
 
 
 
- 
+## Some Pictures
+
+1. The LED Tower being built
+- A cool picture of Fábio and the LED Tower;
+- The final result
+
+
 <a href="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Tower_construction.jpg"><img src="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Tower_construction.jpg" height="360" width="220" ></a>
 <a href="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Tower2.jpg"><img src="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Tower2.jpg" height="360" width="230"  ></a>
 <a href="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Tower.Red.png"><img src="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Tower.Red.png" height="360" width="180" ></a>
 
-<a href="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png"><img src="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png" ></a>
+### Our Logo
 
+<a href="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png"><img src="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png"height="444" width="296" ></a>
