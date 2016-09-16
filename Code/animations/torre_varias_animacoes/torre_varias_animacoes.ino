@@ -70,11 +70,6 @@ void setup(){
 }//***end setup***end setup***end setup***end setup***end setup***end setup***end setup***end setup***end setup***end setup
 
 
-
-
-
-
-
 /*----------------- LOOP -----------------------------*/
 
 
@@ -84,6 +79,12 @@ void loop(){//***start loop***start loop***start loop***start loop***start loop*
   // To control an LED, you simply:
   // LED(level you want 0-7, row you want 0-7, column you want 0-7, red brighness 0-15, green brighness 0-15, blue brighness 0-15);
 
+  int red[3] = {255,0,0};
+  int green[3] = {0,255,0};
+  int blue[3] = {0,0,255};
+  new_spiral(100, 500, blue, red);
+  new_spiral(100, 500, red, green);
+  new_spiral(100, 500, green, blue);
 
   int nrtimes;
 
@@ -230,7 +231,7 @@ void LED(int column, int row, byte red, byte green, byte blue){ //****LED Routin
   //This will all make sense in a sec
   
   //This is 4 bit color resolution, so each color contains x4 64 byte arrays, explanation below:
-    bitWrite(red0[whichbyte], whichbit, bitRead(red, 0));
+  bitWrite(red0[whichbyte], whichbit, bitRead(red, 0));
   bitWrite(red1[whichbyte], whichbit, bitRead(red, 1));
   bitWrite(red2[whichbyte], whichbit, bitRead(red, 2)); 
   bitWrite(red3[whichbyte], whichbit, bitRead(red, 3)); 
@@ -500,3 +501,24 @@ void spiral(unsigned int dlay, int r, int g, int b)
   }
 }
 
+void new_spiral(unsigned int dlay_init, unsigned int dlay, int* base_color, int* spiral_color){
+  mxclear(base_color[0], base_color[1], base_color[2]);
+
+  char lev, col;
+
+  // Draw the spiral  
+  for(lev = 0; lev<16; lev++){
+    LED(lev%8, lev, spiral_color[0], spiral_color[1], spiral_color[2]);
+    delay(dlay_init);
+  }
+
+  // Spin the spiral
+  for(col = 0; col < 8; col++){
+    for(lev = 0; lev < 8; lev++){
+      int start_col = lev%8;
+        LED((start_col+col)%8, lev, spiral_color[0], spiral_color[1], spiral_color[2]);
+        LED((start_col+col)%8, lev+8, spiral_color[0], spiral_color[1], spiral_color[2]);
+    } 
+    delay(dlay);
+  } 
+}
