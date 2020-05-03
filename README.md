@@ -28,4 +28,4 @@ It was built during a [HackerSchool](http://hackerschool.io/) event, the LX Reac
 
 ### Our Logo
 
-<a href="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png"><img src="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png"height="444" width="296" ></a>
+<a href="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png"><img src="https://raw.githubusercontent.com/HackerSchool-IST/LEDtower/master/media/Logo.png" height="444" width="296" ></a>
